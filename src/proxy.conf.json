@@ -1,0 +1,6 @@
+{
+    "/": {
+      "target": "http://localhost/projectBackend/public",
+      "secure": false
+    }
+}

@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99;
+    ion-tabs {
+        margin-top: 70px;
+        ion-tab-bar {
+            --background: #000;
+            --color: #fff;
+            border-bottom: 1px solid #000;
+            .btn {
+                color: #fff;
+            }
+    
+            ion-tab-button.tab-selected {
+    
+                ion-icon,
+                ion-label {
+                    color: var(--ion-color-warning) !important;
+                    --ion-color-base: var(--ion-color-primany) !important;
+                }
+            }
+        }
+    }
+}

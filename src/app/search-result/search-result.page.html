@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/searchbox" aria-expanded="flase" >11</ion-back-button>
+    </ion-buttons>
+    <ion-title>搜索結果</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="message" *ngIf="this.message">
+    <p>{{this.message}}</p>
+  </div>
+  <div class="contents" *ngIf="this.movie">
+    <div class="movie" *ngFor="let item of this.movie" (click)="movieinfo(item.id)">
+      <div class="imgbox">
+        <img [src]="item.image_url" alt="">
+      </div>
+      <div class="info">
+        <h4>{{item.m_title}}</h4>
+        <p class="star">
+          <ion-icon name="star" *ngIf="item.m_score >= 2"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 2 && item.m_score < 4"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 4"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 4 && item.m_score < 6"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 6"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 6 && item.m_score < 8"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 8"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 8 && item.m_score < 10"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 10"></ion-icon>
+          <span>&nbsp;{{item.m_score}}</span>
+        </p>
+        <p class="year">年份 :<span> {{item.m_year}} </span></p>
+        <p> {{item.m_type}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

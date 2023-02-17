@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/login" aria-expanded="flase"></ion-back-button>
+    </ion-buttons>
+    <ion-title>註冊用戶</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-input placeholder="用戶名稱" type="text" required name="fullname" [(ngModel)]="this.fullname"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="this.nameMsg">
+      {{this.nameMsg}}
+    </span>
+    <ion-item lines="full">
+      <ion-input placeholder="電郵" type="email" required name="email" [(ngModel)]="this.email"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="this.emailMsg">
+      {{this.emailMsg}}
+    </span>
+    <ion-item lines="full">
+      <ion-input placeholder="密碼" type="password" required name="password" [(ngModel)]="this.password"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="this.passMsg">
+      {{this.passMsg}}
+    </span>
+    <ion-item lines="full">
+      <ion-input placeholder="確認密碼" type="password" required name="cfmpassword" [(ngModel)]="this.cfmpassword"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="this.cfmpassMsg">
+      {{this.cfmpassMsg}}
+    </span>
+    <ion-row>
+      <ion-col>
+        <ion-button type="button" color="warning" expand="block" (click)="submit()">註冊</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

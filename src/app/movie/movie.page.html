@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title><strong>{{this.movieData.m_title}}</strong></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="box">
+    <ion-row>
+      <ion-col>
+        <img [src]="this.movieData.image_url" style="width:100%; height:200px; object-fit: cover">
+      </ion-col>
+    </ion-row>
+    <ion-row class="title2">
+      <ion-col>{{this.movieData.m_year}}</ion-col>
+      <ion-col>{{this.movieData.m_rating}}</ion-col>
+      <ion-col>{{this.movieData.m_length}}</ion-col>
+      <ion-col>{{this.movieData.m_type}}</ion-col>
+    </ion-row>
+    <br><br>
+    <ion-row class="title1">
+      <p style="text-align:left;">
+        <span style=" font-size: 5px; font-weight: bold;">簡介 : </span> {{this.movieData.m_content}}<br><br>
+      </p>
+      <p>
+        <span style=" font-size: 5px; font-weight: bold;">主演 : </span> {{this.movieData.m_casts}}
+      </p>
+    </ion-row>
+    <br>
+    <p style=" font-size: 5px; font-weight: bold;">評分：</p>
+    <p class="star">
+      <ion-icon name="star" *ngIf="this.movieData.m_score >= 2"></ion-icon>
+      <ion-icon name="star-half-outline" *ngIf="this.movieData.m_score > 2 && this.movieData.m_score < 4"></ion-icon>
+      <ion-icon name="star" *ngIf="this.movieData.m_score >= 4"></ion-icon>
+      <ion-icon name="star-half-outline" *ngIf="this.movieData.m_score > 4 && this.movieData.m_score < 6"></ion-icon>
+      <ion-icon name="star" *ngIf="this.movieData.m_score >= 6"></ion-icon>
+      <ion-icon name="star-half-outline" *ngIf="this.movieData.m_score > 6 && this.movieData.m_score < 8"></ion-icon>
+      <ion-icon name="star" *ngIf="this.movieData.m_score >= 8"></ion-icon>
+      <ion-icon name="star-half-outline" *ngIf="this.movieData.m_score > 8 && this.movieData.m_score < 10"></ion-icon>
+      <ion-icon name="star" *ngIf="this.movieData.m_score >= 10"></ion-icon>
+      <span>&nbsp;{{this.movieData.m_score}}</span>
+    </p>
+    <p style=" font-size: 5px; font-weight: bold;">留言及評分：</p>
+    <div class="comment">
+      <ul>
+        <li *ngFor="let item of scorelist" (click)="score(item)">{{item}}</li>
+      </ul>
+      <ion-label>{{this.m_score}}</ion-label>
+    </div>
+    <div class="inputbox">
+      <input type="text" placeholder="輸入" [(ngModel)]="message">
+    </div>
+    <div class="buttonbox">
+      <button (click)="this.presentSubmitted()">發佈</button>
+    </div>
+    <br>
+    <ion-row>
+      <p style=" font-size: 5px; font-weight: bold; margin-bottom: 10px;">其他影評：</p>
+    </ion-row>
+    <ion-card>
+      <ion-card-content *ngFor="let item of this.commentList">
+        <ion-card-title style=" font-size: 12px;">{{item.name}}:</ion-card-title>
+        <p class="star">       
+          <ion-icon name="star" *ngIf="item.m_score >= 2"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 2 && item.m_score < 4"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 4"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 4 && item.m_score < 6"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 6"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 6 && item.m_score < 8"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 8"></ion-icon>
+          <ion-icon name="star-half-outline" *ngIf="item.m_score > 8 && item.m_score < 10"></ion-icon>
+          <ion-icon name="star" *ngIf="item.m_score >= 10"></ion-icon>
+          <span>&nbsp;{{item.m_score}}</span>
+        </p>
+        <ion-label style=" font-size: 5px;">{{item.comment}}</ion-label>
+      </ion-card-content>
+    </ion-card>
+  </div> 
+</ion-content>

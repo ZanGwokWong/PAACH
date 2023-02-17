@@ -1,0 +1,18 @@
+[
+    {
+        "id" : 1,
+        "title" : "movie1",
+        "year" : 1111,
+        "type" : "劇情 / 喜劇",
+        "star" : 9.5,
+        "img" : "./assets/image/Movie/comedy/free.jpg"
+    },
+    {
+        "id" : 2,
+        "title" : "movie2",
+        "year" : 2222,
+        "type" : "劇情 / 恐怖",
+        "star" : 9.5,
+        "img" : "./assets/image/Movie/horror/Aquietplace.jpg"
+    }
+]

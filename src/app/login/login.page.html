@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>登入</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form>
+<ion-item lines="full">
+  <ion-input placeholder="電郵" type="text" required name="email" [(ngModel)]="this.email"></ion-input>
+</ion-item>
+<ion-item lines="full">
+  <ion-input placeholder="密碼" type="password" required name="password" [(ngModel)]="this.password"></ion-input>
+</ion-item>
+
+<ion-row>
+  <ion-col>
+    <ion-button types="submit" color="warning" expand="block" (click)="login()">登入</ion-button>
+    <div class="fun">
+      <a [routerLink]="['/forgot-password']" class="small-text">忘記密碼</a><br>
+      <a [routerLink]="['/register']" class="small-text">註冊用戶</a>
+    </div>
+  </ion-col>
+
+</ion-row>
+
+</form>
+</ion-content>

@@ -1,0 +1,123 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <i>PAACH</i>
+    <!-- <div class="user"> -->
+      <!-- <ion-icon name="settings-outline"></ion-icon> -->
+    <!-- </div> -->
+  </div>
+  <div class="userInfo">
+    <div class="userbox">
+      <i *ngIf="!this.memberinfo">未登錄</i>
+      <i *ngIf="this.memberinfo">{{this.memberinfo}}</i>
+    </div>
+    <h4 *ngIf="!this.memberinfo">未登錄</h4>
+    <h4 *ngIf="this.memberinfo">{{this.memberinfo}}</h4>
+  </div>
+  <ion-list>
+    <ion-item>
+      <ion-label *ngIf="!this.memberinfo" [routerLink]="['/login']">登陸 / 註冊</ion-label>
+      <ion-label *ngIf="this.memberinfo" (click)="logout()">登出</ion-label>
+
+    </ion-item>
+    <ion-item>
+      <ion-label id="open-modal"> 推薦影片</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label id="open-modal1"> 聯繫我們</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label (click)="this.AboutUs()"> 關於我們</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">取消</ion-button>
+          </ion-buttons>
+          <ion-title style="font-size: 15px;">推薦影片</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">提交</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-input type="text" placeholder="電郵" [(ngModel)]="userEmail"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="影片名稱" [(ngModel)]="movieName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="評論" [(ngModel)]="movieComment"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  <ion-modal #modal trigger="open-modal1" [presentingElement]="presentingElement" >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>聯繫我們</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">關閉</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-item>
+            <ion-avatar slot="end">
+              <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Panta</h2>
+              <p>管理員</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-avatar slot="end">
+              <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Andy</h2>
+              <p>管理員</p>
+            </ion-label>
+          </ion-item>
+          <a href="mailto:andrew.taiming@gmail.com">
+            <ion-item>
+              <ion-avatar slot="end">
+                <ion-img src="assets/admin/Andrew.jpeg"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Andrew</h2>
+                <p>管理員</p>
+              </ion-label>
+            </ion-item>
+          </a>
+          <ion-item>
+            <ion-avatar slot="end">
+              <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
+            </ion-avatar>
+            <ion-label>
+              <h2>Calvin</h2>
+              <p>管理員</p>
+            </ion-label>
+          </ion-item>
+          <a href="mailto:zhenguowang415@gmail.com">
+            <ion-item>
+              <ion-avatar slot="end">
+                <ion-img src="assets/admin/Henry.jpg"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h2>Henry</h2>
+                <p>管理員</p>
+              </ion-label>
+            </ion-item>
+          </a>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

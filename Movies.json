@@ -1,0 +1,143 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "Movies": [
+    {
+      "id": "2",
+      "m_title": "星際啟示錄",
+      "m_year": "2014",
+      "m_rating": "13+",
+      "m_length": "2小時49分鐘",
+      "m_type": "科幻片",
+      "m_content": "人類恐將滅絕之際，一群太空人穿越蟲洞，努力尋找其它適宜居住的星球。",
+      "m_casts": "主演：馬修·麥康納，安·海瑟薇，潔西卡·雀絲坦",
+      "m_score": "9.5",
+      "m_icon": "interstellar.jpg"
+    },
+    {
+      "id": "3",
+      "m_title": "MISS 愛教壞",
+      "m_year": "2011",
+      "m_rating": "16+",
+      "m_length": "1小時31分鐘",
+      "m_type": "喜劇片",
+      "m_content": "分手導致嫁金龜婿的計​​畫泡湯，這位自私的中學老師索性換目標，耍心機追新的男人，結果得到出乎意料的人生經驗。",
+      "m_casts": "主演：卡麥蓉·狄亞茲，傑森·席格，賈斯汀·提姆布萊克",
+      "m_score": "7.5",
+      "m_icon": "badteacher.jpg"
+    },
+    {
+      "id": "4",
+      "m_title": "波士 BB",
+      "m_year": "2017",
+      "m_rating": "7+",
+      "m_length": "1小時37分鐘",
+      "m_type": "喜劇片",
+      "m_content": "爸媽抱回一名小寶寶，而這個寶寶暗地裡竟然滿口生意經，小男孩則發現自己陷入惡毒的企業陰謀中。",
+      "m_casts": "主演：亞歷·鮑德溫，麗莎·庫卓，吉米·基墨",
+      "m_score": "8",
+      "m_icon": "boss.jpg"
+    },
+    {
+      "id": "5",
+      "m_title": "名暪憨族",
+      "m_year": "2013",
+      "m_rating": "16+",
+      "m_length": "1小時49分鐘",
+      "m_type": "喜劇片",
+      "m_content": "一名不成氣候的大麻販一名不成氣候的大麻販子對供應商欠下債務，於是他同意從墨西哥走私一大批的大麻，並決定雇用他人假扮他的家人，作為掩護。",
+      "m_casts": "主演：珍妮佛·安妮斯頓，傑森·蘇戴西斯，艾瑪·羅勃茲",
+      "m_score": "9.5",
+      "m_icon": "millers.jpg"
+    },
+    {
+      "id": "6",
+      "m_title": "無聲絕境",
+      "m_year": "2018",
+      "m_rating": "13+",
+      "m_length": "1小時31分鐘",
+      "m_type": "恐怖片",
+      "m_content": "關係緊密的一家人與世隔絕，擔心發出聲音會引來可怕的外來生物，因而一直活在恐懼中。",
+      "m_casts": "主演：約翰·卡拉辛斯基，艾蜜莉·布朗特，米莉·西蒙斯",
+      "m_score": "8",
+      "m_icon": "Aquietplace.jpg"
+    },
+    {
+      "id": "7",
+      "m_title": "孤疑",
+      "m_year": "2009",
+      "m_rating": "16+",
+      "m_length": "2小時2分鐘",
+      "m_type": "恐怖片",
+      "m_content": "凱特與丈夫約翰·柯曼從孤兒院領養了 9 歲的艾絲特，但是凱特很快就看穿了艾絲特天使臉孔下的真實面貌。",
+      "m_casts": "主演：薇拉·法蜜嘉，彼得·賽斯嘉，伊莎貝拉·傅爾曼",
+      "m_score": "7",
+      "m_icon": "Orphan.jpg"
+    },
+    {
+      "id": "8",
+      "m_title": "奪命狂呼",
+      "m_year": "1996",
+      "m_rating": "16+",
+      "m_length": "1小時51分鐘",
+      "m_type": "恐怖片",
+      "m_content": "當一群青少年分別成為嗜血殺人魔的嫌犯、目標和受害者時，一座小鎮過往的黑暗記憶也被挑起了。",
+      "m_casts": "主演：R·J·賽勒，潔西卡·蘇拉，喬琪亞·惠格姆",
+      "m_score": "8",
+      "m_icon": "scream.jpg",
+      "m_comment": [
+        {
+          "username": "用戶A",
+          "message": "very good!!!!!"
+        },
+        {
+          "username": "用戶B",
+          "message": "好好睇，好緊張好刺激！值滿分！very good!!!!!"
+        },
+        {
+          "username": "用戶C",
+          "message": "好好睇，好緊張 very good!!!!!"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "m_title": "潛行凶間",
+      "m_year": "2010",
+      "m_rating": "13+",
+      "m_length": "2小時28分鐘",
+      "m_type": "科幻片",
+      "m_content": "在這部震撼人心的科幻驚悚片中，主角經營的間諜業務是進入目標對象的潛意識之中，塑造他們內心的想法。",
+      "m_casts": "主演：李奧納多·狄卡皮歐，喬瑟夫·高登李維，艾略特·佩吉",
+      "m_score": "9",
+      "m_icon": "inception.jpg"
+    },
+    {
+      "id": "10",
+      "m_title": "星際過客",
+      "m_year": "2016",
+      "m_rating": "13+",
+      "m_length": "1小時56分鐘",
+      "m_type": "科幻片",
+      "m_content": "在提前幾十年從冬眠中醒來後，一個孤獨的人在星際旅行中面臨著另一位乘客的道德困境。",
+      "m_casts": "主演：珍妮佛·勞倫斯，克里斯·普瑞特",
+      "m_score": "8",
+      "m_icon": "passengers.jpg"
+    }
+  ]
+}
